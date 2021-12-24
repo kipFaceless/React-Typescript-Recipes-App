@@ -1,6 +1,7 @@
 
 import ReactDOM from 'react-dom';
 import { RecipesApp } from './RecipesApp';
+//import './style/main.css'
 
 
 ReactDOM.render(
@@ -9,4 +10,3 @@ ReactDOM.render(
   
   document.getElementById('root')
 );
-

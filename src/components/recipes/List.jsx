@@ -1,6 +1,6 @@
-import { Istate as IProps} from '../../RecipesApp'
+//import { Istate as IProps} from '../../RecipesApp'
 
-const List : React.FC<IProps> = ({recipe})=> {
+const List  = ({recipe})=> {
 
     const handleList = ()=>{
         return recipe.map(rec =>{
