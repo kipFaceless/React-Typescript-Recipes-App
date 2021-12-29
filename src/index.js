@@ -1,12 +1,13 @@
 
 import ReactDOM from 'react-dom';
-import { RecipesApp } from './RecipesApp';
+import { RecipesAppHome } from './RecipesAppHome';
 //import './style/main.css'
+import { AppRouter } from './routers/AppRouter';
 
 
 ReactDOM.render(
 
-    <RecipesApp />,
+    <AppRouter/>,
   
   document.getElementById('root')
 );

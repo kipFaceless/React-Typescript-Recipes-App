@@ -2,32 +2,16 @@
 import { useForm } from 'react-hook-form';
 
 
-
-
 const AddToList = (props) => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     
     
     const onSubmit = (data, e) => {
-        //console.log("data", data)
         props.addRecipe(data)
         e.target.reset()
        
-       // e.target.reset()
     }
- /*   const handleChange = (e)=> {
-   
-     
-        setInput({
-            ...input,
-            [e.target.name] : e.target.value
-        } )
-    }
-
-*/
- 
-  
 
     return (
         <form onSubmit =  {  handleSubmit(onSubmit)}>
@@ -36,54 +20,51 @@ const AddToList = (props) => {
                 
                 {errors.name && <span>This field is required</span>}
              <textarea   
-                
+                 {...register("stuff")} 
                 placeholder ="Ingredients"
                 className = "form-control mt-2"
-             // value = {input.stuff}
-                name="stuff"
-                
-            
+             
             />
             
             <textarea   defaultValue="Water required" 
                 
                 placeholder ="Water"
                 className = "form-control mt-2"
-                //value = {input.prepare_mode}
                
                 {...register("prepare_mode", { required: true })}
                // onChange = {(handleChange)}
                
             />
-            <input    
+            <input 
+                 {...register("duration")}   
                 type ="text"
                 placeholder ="Duration"
                 className = "form-control mt-2"
-               // value = {input.duration}
-                name="duration"
+                
                 //onChange = {handleChange}
             />
             <input    
                 type ="number"
+                {...register("calories", )}  
                 placeholder ="Calories"
                 className = "form-control mt-2"
-               //value = {input.calories}
                 name="calories"
                 //onChange = {handleChange}
             />
             <input    
                 type ="number"
+                {...register("cost")}  
                 placeholder ="Cost"
                 className = "form-control mt-2"
-               // value = {input.cost}
+               
                 name="cost"
                 //onChange = {handleChange}
             />
             <input    
-                type ="file"
+                type ="text"
+                {...register("poster")}  
                 placeholder ="Poster"
                 className = "form-control mt-2"
-                //value = {input.poster}
                 name="poster"
                 //onChange = {handleChange}
             />
