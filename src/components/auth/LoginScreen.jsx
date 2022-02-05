@@ -9,6 +9,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Icon }  from '@material-ui/core'
 
+import { useRef } from 'react';
+import {signup} from "../../firebase";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -18,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const LoginScreen = () => {
+    const emailRef = useRef();
+    const passwordRef = useRef();
+  const handleSignup = async () =>{
+      await signup(emailRef.current.value, passwordRef.current.value);
+  }
   const classes = useStyles();
     return ( 
         <>
@@ -43,7 +50,13 @@ export const LoginScreen = () => {
       <Button variant="outlined">Outlined</Button>
     </Stack>
       <Typography variant="body1" color="secondary" align='center'>Typo test</Typography>
-    
+
+
+          <input ref={emailRef} type="email" placeholder='email'/> <br /> <br />
+          <input ref={passwordRef} type="password" placeholder ='Password'/> <br /><br />
+
+        <button onClick ={handleSignup}> Signup</button>
+
         </>
      );
 }
