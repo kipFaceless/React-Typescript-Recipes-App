@@ -39,15 +39,15 @@ export const LoginScreen = () => {
         
       } catch (error) {
         
-        if(error=="FirebaseError: Firebase: Error (auth/email-already-in-use)."){
+        if(error==="FirebaseError: Firebase: Error (auth/email-already-in-use)."){
           alert("Este email já se encontra em uso")
 
         }
-        if(error == "FirebaseError: Firebase: Error (auth/invalid-email)."){
+        if(error === "FirebaseError: Firebase: Error (auth/invalid-email)."){
           alert("Formato de e-mail inválido")
         }
 
-        if(error == "FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password)."){
+        if(error === "FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password)."){
           alert("A senha de conter no mínimo 6 caracteres")
         }
         
@@ -67,11 +67,11 @@ try {
   
 } catch (error) {
  
-  if(error=="FirebaseError: Firebase: Error (auth/wrong-password)."){
+  if(error==="FirebaseError: Firebase: Error (auth/wrong-password)."){
     alert("Palavra-passe incorrecta. Tente novamente")
 
   }
-  if(error == "FirebaseError: Firebase: Error (auth/user-not-found)."){
+  if(error === "FirebaseError: Firebase: Error (auth/user-not-found)."){
     alert("Usuário não existente. Faça o seu cadastro para continuar")
   }
 
