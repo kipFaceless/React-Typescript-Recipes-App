@@ -1,5 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { LoginScreen } from "../components/auth/LoginScreen";
+import LoginPage from "../components/auth/LoginPage";
+
 
 import{ DashboardRoutes } from "./DashboardRouter";
 
@@ -10,7 +11,7 @@ export const AppRouter = () => {
      
       <Routes>
          
-         <Route path="login" element={<LoginScreen />} />
+         <Route path="login" element={<LoginPage />} />
          <Route path="/*"  element= {< DashboardRoutes />} /> 
          
       </Routes>

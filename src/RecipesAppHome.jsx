@@ -1,9 +1,10 @@
-import{RecipesApp} from './components/recipes/Recipes'
 
+import DashboardRoutes from './components/DashboardRoutes';
+import './App.css';
 export const RecipesAppHome = () => {
     return (  
         <>
-        < RecipesApp />
+        < DashboardRoutes />
         </>
     );
 }

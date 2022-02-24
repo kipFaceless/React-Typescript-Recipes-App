@@ -1,13 +1,15 @@
-
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { RecipesAppHome } from './RecipesAppHome';
-//import './style/main.css'
-import { AppRouter } from './routers/AppRouter';
 
+import reportWebVitals from './reportWebVitals';
+import { AppRouter } from './routes/AppRouter';
 
 ReactDOM.render(
-
-    <AppRouter/>,
-  
+ 
+    <AppRouter />,
+ 
   document.getElementById('root')
 );
+
+
+reportWebVitals();
