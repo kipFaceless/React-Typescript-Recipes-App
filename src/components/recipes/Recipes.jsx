@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import AddToList from "./AddToList";
-import List from "./List";
 import RecipeTable from "./RecipeTable";
 //import { v4 as uuid4 } from "uuid";
 //import "./style/main.css";
 import EditRecipeForm from "./EditRecipeForm";
 import { onSnapshot, collection, doc, addDoc, updateDoc, deleteDoc, serverTimestamp, query, orderBy } from "firebase/firestore"
 import db from "../../firebase";
-import { Modal } from "@material-ui/core";
+
 
 
 
@@ -164,7 +163,8 @@ const Recipes = () => {
   
           />
   
-          <List recipe={recipes} />
+        
+          
         </div>
       </div>
     );

@@ -87,7 +87,7 @@ const AddToList = (props) => {
 
         <Modal open = {open}>
          <Container className = {classes.container}>
-        <form onSubmit =  {  handleSubmit(onSubmit)}>
+        <form onSubmit =  { handleSubmit(onSubmit)}>
               <h2>Add Recipe</h2>
 
               <div className={classes.item}>

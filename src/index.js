@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import reportWebVitals from './reportWebVitals';
+import './index.css'
+
+import { RecipesAppHome } from './RecipesAppHome';
+import DashboardGridRoutes from './components/DashboardGrid';
 import { AppRouter } from './routes/AppRouter';
 
 ReactDOM.render(
  
-    <AppRouter />,
+    <RecipesAppHome />,
  
   document.getElementById('root')
 );
 
 
-reportWebVitals();
+
